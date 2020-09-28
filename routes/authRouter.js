@@ -25,7 +25,7 @@ router.post("/register", async(req, res)=>{
         res.send({token:token})
 
     }catch(err){
-        return res.status(422).send(err.message)
+        return res.status(422).send({"error":"Could not register. username exists"})
     }
 
 })
